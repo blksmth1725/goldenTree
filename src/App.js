@@ -1,15 +1,8 @@
-import CategoryItem from "./components/category-item/category-item.component.jsx";
+import Directory from "./components/second-item/directory.component.jsx";
 import { categories } from "./models/categories.js";
-import "./scss/categories.styles.scss";
 
 const App = () => {
-	return (
-		<div className="categories-container">
-			{categories.map((category) => (
-				<CategoryItem key={category.id} category={category} />
-			))}
-		</div>
-	);
+	return <Directory categories={categories} />;
 };
 
 export default App;
