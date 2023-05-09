@@ -5,7 +5,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 import { formInputs, defaultFormFields } from "../../models/formInputs";
 
-import "../../scss/formInputs.styles.scss";
+import "../../scss/signUpForm.styles.scss";
 
 const SignUpForm = () => {
 	const [formFields, setFormFields] = useState(defaultFormFields);
@@ -47,8 +47,9 @@ const SignUpForm = () => {
 	};
 
 	return (
-		<div>
-			<h1>SignUpForm</h1>
+		<div className="signUpContainer">
+			<h2>Dont have an account with us?</h2>
+			<span>Sign Up with your email and password</span>
 			<form onSubmit={handleSubmit}>
 				{formInputs.map(({ id, label, name, type, required }) => {
 					return (
