@@ -5,9 +5,15 @@ import {
 } from "../../utils/firebase/firebase.utils";
 import { formInputs, defaultFormFields } from "../../models/formInputs";
 
+import "../../scss/formInputs.styles.scss";
+
 const SignUpForm = () => {
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const { displayName, email, password, confirmPassword } = formFields;
+
+	const resetFormFields = () => {
+		setFormFields(defaultFormFields);
+	};
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
@@ -16,14 +22,22 @@ const SignUpForm = () => {
 			return;
 		}
 		try {
-			const { user } = await createAuthUserWithEmailAndPassword(
+			const response = await createAuthUserWithEmailAndPassword(
 				email,
 				password
 			);
-			console.log(user);
-			await creatUserDocFromAuth(user, { displayName });
+			if (response && response.user) {
+				await creatUserDocFromAuth(response.user, { displayName });
+				resetFormFields();
+			} else {
+				console.log("User creation encountered an error: no user returned");
+			}
 		} catch (error) {
-			console.log("User creation encountered an error", error);
+			if (error.code === "auth/email-already-in-use") {
+				alert("Cannot create user: Email already in use.");
+			} else {
+				console.log("User creation encountered an error", error);
+			}
 		}
 	};
 
@@ -38,16 +52,25 @@ const SignUpForm = () => {
 			<form onSubmit={handleSubmit}>
 				{formInputs.map(({ id, label, name, type, required }) => {
 					return (
-						<Fragment key={id}>
-							<label>{label}</label>
+						<div className="group" key={id}>
 							<input
+								className="form-input"
 								required={required}
 								type={type}
 								onChange={handleChange}
 								name={name}
-								value={formFields.value}
+								value={formFields[name]}
 							/>
-						</Fragment>
+							{label && (
+								<label
+									className={`${
+										formFields[name] ? "shrink" : ""
+									} form-input-label`}
+								>
+									{label}
+								</label>
+							)}
+						</div>
 					);
 				})}
 				<button type="submit">Sign Up</button>
