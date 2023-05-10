@@ -1,9 +1,10 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import {
 	createAuthUserWithEmailAndPassword,
 	creatUserDocFromAuth,
 } from "../../utils/firebase/firebase.utils";
 import { formInputs, defaultFormFields } from "../../models/formInputs";
+import MainButton from "../../components/buttons/mainButton.component";
 
 import "../../scss/signUpForm.styles.scss";
 
@@ -74,7 +75,7 @@ const SignUpForm = () => {
 						</div>
 					);
 				})}
-				<button type="submit">Sign Up</button>
+				<MainButton type="submit">Sign Up</MainButton>
 			</form>
 		</div>
 	);
