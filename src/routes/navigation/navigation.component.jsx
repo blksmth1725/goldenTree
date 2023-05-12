@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../../assests/crown.svg";
-import "../navigation-component/navigation.styles.scss";
+import "./navigation.styles.scss";
 
 const NavigationBar = () => {
 	return (
@@ -15,7 +15,7 @@ const NavigationBar = () => {
 					<Link className="nav-link" to="shop">
 						Shop
 					</Link>
-					<Link className="nav-link" to="signIn">
+					<Link className="nav-link" to="auth">
 						Sign In
 					</Link>
 				</div>

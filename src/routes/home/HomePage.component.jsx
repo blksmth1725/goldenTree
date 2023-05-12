@@ -1,4 +1,4 @@
-import Directory from "../../components/directory-component/directory.component";
+import Directory from "../../components/directoryComponent/directory.component";
 import { categories } from "../../models/categories";
 
 const HomePage = () => {

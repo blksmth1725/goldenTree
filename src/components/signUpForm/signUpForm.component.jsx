@@ -3,17 +3,20 @@ import {
 	createAuthUserWithEmailAndPassword,
 	creatUserDocFromAuth,
 } from "../../utils/firebase/firebase.utils";
-import { formInputs, defaultFormFields } from "../../models/formInputs";
+import {
+	signUpFormInputs,
+	defaultSignUpFormFields,
+} from "../../models/formInputs";
 import MainButton from "../../components/buttons/mainButton.component";
 
-import "../../scss/signUpForm.styles.scss";
+import "./signUpForm.styles.scss";
 
 const SignUpForm = () => {
-	const [formFields, setFormFields] = useState(defaultFormFields);
+	const [formFields, setFormFields] = useState(defaultSignUpFormFields);
 	const { displayName, email, password, confirmPassword } = formFields;
 
 	const resetFormFields = () => {
-		setFormFields(defaultFormFields);
+		setFormFields(defaultSignUpFormFields);
 	};
 
 	const handleSubmit = async (event) => {
@@ -52,7 +55,7 @@ const SignUpForm = () => {
 			<h2>Dont have an account with us?</h2>
 			<span>Sign Up with your email and password</span>
 			<form onSubmit={handleSubmit}>
-				{formInputs.map(({ id, label, name, type, required }) => {
+				{signUpFormInputs.map(({ id, label, name, type, required }) => {
 					return (
 						<div className="group" key={id}>
 							<input
