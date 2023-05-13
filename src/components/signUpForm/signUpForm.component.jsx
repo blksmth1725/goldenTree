@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import {
 	createAuthUserWithEmailAndPassword,
 	creatUserDocFromAuth,
@@ -9,13 +9,11 @@ import {
 } from "../../models/formInputs";
 import MainButton from "../../components/buttons/mainButton.component";
 
-import { UserContext } from "../../context/user.context";
 import "./signUpForm.styles.scss";
 
 const SignUpForm = () => {
 	const [formFields, setFormFields] = useState(defaultSignUpFormFields);
 	const { displayName, email, password, confirmPassword } = formFields;
-	const { setCurrentUser } = useContext(UserContext);
 
 	const resetFormFields = () => {
 		setFormFields(defaultSignUpFormFields);
@@ -34,7 +32,6 @@ const SignUpForm = () => {
 			);
 			if (user) {
 				await creatUserDocFromAuth(user, { displayName });
-				setCurrentUser(user);
 				resetFormFields();
 			} else {
 				console.log("User creation encountered an error: no user returned");
