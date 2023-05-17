@@ -1,0 +1,236 @@
+{{
+  "id": 17893,
+  "agencyId": 53639,
+  "identification": {
+    "publish": false,
+    "followUp": false,
+    "lockOffender": false,
+    "photoURL": "https://docs.watchsystemsdev.com/pictures//",
+    "firstName": "Lestera",
+    "middleName": "B",
+    "lastName": "Gradsmith",
+    "birthDate": "1962-12-20T00:00:00",
+    "age": 60,
+    "socialSecurityNumber": "879299474",
+    "registrationNumber": "00113552299",
+    "statusId": 164798,
+    "placeOfBirthCity": "LA",
+    "nationalityId": 1
+  },
+  "registration": {
+    "responsibilityId": 32599,
+    "riskLevelId": 0,
+    "zoneId": 4703,
+    "nonCompliant": false,
+    "lifetimeRegistration": false,
+    "registrationTypeId": 0,
+    "nextVerificationDate": "2008-09-23T00:00:00",
+    "stateVerified": false,
+    "officerAlertActive": false
+  },
+  "physical": {
+    "heightInches": 63,
+    "weight": 17,
+    "buildId": null,
+    "raceId": 3,
+    "ethnicityId": null,
+    "ethnicityGroupId": null,
+    "sexId": 1,
+    "hairColorId": 1,
+    "hairLengthId": null,
+    "eyeColorId": 2,
+    "hasGlasses": null,
+    "skinToneId": null,
+    "bloodTypeId": null,
+    "dominantHandId": null,
+    "dnaAvailable": null,
+    "dnaLocation": null,
+    "fingerprintAvailable": 2,
+    "fingerprintLocation": null,
+    "fingerprintPCN": null,
+    "palmprintAvailable": null,
+    "palmprintLocation": null,
+    "marks": [
+      {
+        "id": 6696779,
+        "current": true,
+        "typeId": 0,
+        "locationId": 8,
+        "description": "Ultraviolet Tattoo Left Arm"
+      }
+    ],
+    "dna": null,
+    "other": {
+      "medicalConditions": null,
+      "characteristics": null
+    }
+  },
+  "contact": {
+    "addresses": [
+      {
+        "id": 16230,
+        "primary": true,
+        "current": true,
+        "startDate": "2005-06-28T00:00:00",
+        "typeId": 1,
+        "directionPrefixId": 0,
+        "street": "205 Martin Luther King Drive",
+        "streetAddress": "205 Martin Luther King Drive",
+        "directionSuffixId": 0,
+        "city": "Covington",
+        "stateId": 19,
+        "zipCode": "70433",
+        "countyId": 0,
+        "countryId": 1,
+        "tribalLand": false,
+        "schoolDistrictId": 3466,
+        "housingStatusId": 0,
+        "minorAtAddress": false,
+        "proximityExempt": false,
+        "xLongitude": -90.09488,
+        "yLatitude": 30.494851,
+        "geoResult": "S5HPNTSCZA"
+      }
+    ]
+  },
+  "associates": [
+    {
+      "id": 899466,
+      "primary": true,
+      "current": true,
+      "firstName": "John",
+      "middleName": "S",
+      "lastName": "Smith",
+      "suffix": "Sr",
+      "relationshipToOffenderId": 5
+    },
+    {
+      "id": 899491,
+      "primary": true,
+      "current": true
+    },
+    {
+      "id": 899492,
+      "primary": true,
+      "current": true
+    }
+  ],
+  "vehicles": {
+    "mobileHomes": [
+      {
+        "id": 2929,
+        "primary": true,
+        "current": true,
+        "makeId": 1,
+        "modelYear": 2011,
+        "colorId": 5,
+        "licensePlateStateId": 7
+      },
+      {
+        "id": 2953,
+        "primary": true,
+        "current": true,
+        "makeId": 1,
+        "modelYear": 1914,
+        "colorId": 4,
+        "licensePlateStateId": 10,
+        "licensePlateExpirationYear": 1914
+      }
+    ],
+    "aircraft": [
+      {
+        "id": 855,
+        "primary": true,
+        "current": true,
+        "ownershipId": 0,
+        "modelYear": 2010,
+        "licensePlateTypeId": 0,
+        "licensePlateExpirationYear": "0000",
+        "makeId": 3,
+        "styleId": 10,
+        "colorId": 5
+      },
+      {
+        "primary": true,
+        "current": true,
+        "modelYear": 2022,
+        "makeId": 2,
+        "styleId": 14,
+        "colorId": 3
+      }
+    ],
+    "atvs": [
+      {
+        "id": 5698,
+        "primary": true,
+        "current": true,
+        "makeId": 7,
+        "modelId": 4,
+        "modelYear": 2011,
+        "styleId": 0,
+        "primaryColorId": 17,
+        "secondaryColorId": 39,
+        "licensePlateTypeId": 0,
+        "licensePlateStateId": 0,
+        "licensePlateExpirationYear": 2015
+      },
+      {
+        "id": 5699,
+        "primary": true,
+        "current": true,
+        "makeId": 0,
+        "modelId": 0,
+        "modelYear": 2011,
+        "styleId": 0,
+        "primaryColorId": 3,
+        "secondaryColorId": 39,
+        "licensePlateTypeId": 0,
+        "licensePlateStateId": 0,
+        "licensePlateExpirationYear": 2015
+      }
+    ]
+  },
+  "fees": null,
+  "stateRecords": {},
+  "criminalRecords": {
+    "offenses": [
+      {
+        "id": 15997,
+        "primary": true,
+        "crimeCodeId": 76192,
+        "sexualMotivation": false,
+        "counts": 0,
+        "attempted": false,
+        "publish": true,
+        "juvenileOffense": false,
+        "locationStateId": 0,
+        "locationCountyId": 0,
+        "courtId": 0,
+        "convictionStateId": 0,
+        "crrNumber": "1116",
+        "committedDate": "1999-10-26T00:00:00",
+        "convictedDate": "1999-11-01T00:00:00",
+        "ageAtCommit": 36,
+        "weaponTypeId": 0,
+        "stateEquivalent": {
+          "id": null,
+          "notes": null
+        }
+      }
+    ]
+  },
+  "investigativeNotes": {},
+  "verifications": null,
+  "miscellaneous": null,
+  "attachments": {},
+  "ncic": {
+    "offenderInformation": [
+      {
+        "offenderStatusId": null,
+        "miscellaneousNotes": null
+      }
+    ],
+    "cautionMedicalConditions": null,
+    "queueTransactions": null
+  }
+}}
