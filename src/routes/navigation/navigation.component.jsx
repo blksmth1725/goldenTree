@@ -1,6 +1,7 @@
 import { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { UserContext } from "../../context/user.context";
+import { CartContext } from "../../context/cart.context";
 
 import CartIcon from "../../components/cartIcon/cartIcon.component";
 import CartDropdown from "../../components/cartDropdown/cartDropdown.component";
@@ -11,6 +12,7 @@ import "./navigation.styles.scss";
 
 const NavigationBar = () => {
 	const { currentUser } = useContext(UserContext);
+	const { isCartOpen } = useContext(CartContext);
 
 	return (
 		<Fragment>
@@ -33,7 +35,7 @@ const NavigationBar = () => {
 					)}
 					<CartIcon />
 				</div>
-				<CartDropdown />
+				{isCartOpen && <CartDropdown />}
 			</div>
 			<Outlet />
 		</Fragment>
